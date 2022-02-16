@@ -1,6 +1,3 @@
----
-tags: ga
----
 # CompCoin
 Spot and time series cryptocurrency pair valuations.
 React + Axios demo project
@@ -14,7 +11,7 @@ Deployed at [compcoin.dbb.tools](https://compcoin.dbb.tools) via heroku.
 - [Project History](#project-history)
     - [Brief](#brief)
     - [Planning](#planning)
-    - [Execution and Lessons](#execution-and-lessons)
+    - [Execution and Lessons Learned](#execution-and-lessons-learned)
 - [Issues + ToDos](#issues)
 - [Built with](#built-with)
 - [Team Members](#team-members)
@@ -41,7 +38,7 @@ Run with:
 ```console
 :<repo-root>$ npm run dev
 ```
-`npm run dev` defaults to port 3000. To specifiy a local port:
+`npm run dev` defaults to port 3000. To specify a local port:
 ```console
 :<repo-root>$ PORT=<port> npm run dev
 ```
@@ -74,7 +71,7 @@ Basic project plan, targeting highest value issues first, followed by highest ri
 1. Gather time series data.
 1. Chart time series data.
 1. Re-use time series data components to offer comparison from one base to a variety of quoted tokens.
-### Execution and Lessons
+### Execution and Lessons Learned
 1. Spot rates from Coinbase:
     - [Paramaterized api call](https://github.com/DBBrowne/project-two-sei/blob/dad83208c45aa7a0d4cc5615ba41021b1d7b20f7/src/lib/api.js#L3-L8)
     - [Simultaneous asynchronous fetches](https://github.com/DBBrowne/project-two-sei/blob/main/src/lib/utils.js#L4-L23):

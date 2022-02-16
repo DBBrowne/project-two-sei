@@ -12,7 +12,7 @@ Deployed at [compcoin.dbb.tools](https://compcoin.dbb.tools) via heroku.
     - [Brief](#brief)
     - [Planning](#planning)
     - [Execution and Lessons Learned](#execution-and-lessons-learned)
-- [Issues and Todos](#issues-and-todos)
+- [Issues and ToDos](#issues-and-todos)
 - [Built with](#built-with)
 - [Team Members](#team-members)
 
@@ -176,7 +176,7 @@ Basic project plan, targeting highest value issues first, followed by highest ri
       }
       ```
 
-## Issues and Todos
+## Issues and ToDos
  - **Unhappy Wrapper** - combine error and loading into single react component to accept error/loading state as parameters and wrap the happy path.
  - **Chart Y-Axis Scaling** - at extreme ranges, the Y scaling of teh charting component fails, and the line extends off the chart.  We saw this during development, and believed that we had addressed it by [setting the domain and margins](https://github.com/DBBrowne/project-two-sei/blob/main/src/displays/TimeSeries.js#L76-L77), however the issue has resurfaced.  Further investigation is required.
     ```jsx
@@ -189,7 +189,7 @@ Basic project plan, targeting highest value issues first, followed by highest ri
 
  ![Chart Component scaling failure](https://user-images.githubusercontent.com/72463218/154364867-8e98597e-57fe-4408-9a79-75206c6b6a79.png)
 ## Built With
-- [Create React App](https://github.com/facebook/create-react-app).
+- [Create React App](https://github.com/facebook/create-react-app)
 - [Axios](https://npmjs.com/package/axios)
 - [React-Vis](https://uber.github.io/react-vis/)
 - [Bulma css framework](https://bulma.io)
@@ -197,5 +197,5 @@ Basic project plan, targeting highest value issues first, followed by highest ri
 - [dayjs](https://www.npmjs.com/package/dayjs)
 
 ## Team Members
-- [tigeryant](github.com/tigeryant)
-- [Duncan Browne](github.com/dbbrowne)
+- [tigeryant](https://github.com/tigeryant)
+- [Duncan Browne](https://github.com/dbbrowne)

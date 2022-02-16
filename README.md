@@ -12,7 +12,7 @@ Deployed at [compcoin.dbb.tools](https://compcoin.dbb.tools) via heroku.
     - [Brief](#brief)
     - [Planning](#planning)
     - [Execution and Lessons Learned](#execution-and-lessons-learned)
-- [Issues + ToDos](#issues)
+- [Issues and Todos](#issues-and-todos)
 - [Built with](#built-with)
 - [Team Members](#team-members)
 
@@ -176,7 +176,7 @@ Basic project plan, targeting highest value issues first, followed by highest ri
       }
       ```
 
-## Issues
+## Issues and Todos
  - **Unhappy Wrapper** - combine error and loading into single react component to accept error/loading state as parameters and wrap the happy path.
  - **Chart Y-Axis Scaling** - at extreme ranges, the Y scaling of teh charting component fails, and the line extends off the chart.  We saw this during development, and believed that we had addressed it by [setting the domain and margins](https://github.com/DBBrowne/project-two-sei/blob/main/src/displays/TimeSeries.js#L76-L77), however the issue has resurfaced.  Further investigation is required.
     ```jsx

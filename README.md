@@ -1,8 +1,8 @@
 # CompCoin
-Spot and time series cryptocurrency pair valuations.
-React + Axios demo project
+Spot and time series cryptocurrency pair valuations.  
+React + Axios demo project.
 
-Deployed at [compcoin.dbb.tools](https://compcoin.dbb.tools) via heroku.
+Deployed at [compcoin.dbb.tools](https://compcoin.dbb.tools) via [Netlify](https://netlify.com/).
 
 
 ## Contents
@@ -60,7 +60,7 @@ Consume a public API, build a multi-component react app to process and display d
 **Timeframe**: Two days.
 
 ### Planning
-Investigate potential data sources, design iterable wireframes in Miro.  Settle on an xe.com style layout with data from Coinbase.
+Investigate potential data sources, design iterable wireframes in Miro. Settle on an xe.com style layout with data from Coinbase.
 |CompCoin UI research|CompCoin wireframe MVP|CompCoin V2|
 |---|---|---|
 |![GA_Project2 - CompCoin UI research](https://user-images.githubusercontent.com/72463218/154285392-708c17ac-f792-48eb-b201-8de09932a6c5.jpg)|![GA_Project2 - CompCoin wireframe MVP](https://user-images.githubusercontent.com/72463218/154285714-240755d6-491e-4fe3-bcb5-ff1ae6d4104a.jpg)|![GA_Project2 - CompCoin V2](https://user-images.githubusercontent.com/72463218/154285723-b5d5b93d-2401-4b2e-8d4d-1c7f5f1aa3a3.jpg)|
@@ -75,7 +75,7 @@ Basic project plan, targeting highest value issues first, followed by highest ri
 1. Spot rates from Coinbase:
     - [Paramaterized api call](https://github.com/DBBrowne/project-two-sei/blob/dad83208c45aa7a0d4cc5615ba41021b1d7b20f7/src/lib/api.js#L3-L8)
     - [Simultaneous asynchronous fetches](https://github.com/DBBrowne/project-two-sei/blob/main/src/lib/utils.js#L4-L23):
-      ```javascript
+      ```js
       export async function getExchangeRate({ original, target }) {
         // get conversion to USD for original and target
         const [originalUSDConversion, targetUSDConversion] = await Promise.all(
@@ -93,9 +93,9 @@ Basic project plan, targeting highest value issues first, followed by highest ri
       }
       ```
 1. [React Router](https://github.com/DBBrowne/project-two-sei/blob/f343e27934538ee2683a6994247e017ca5f737f6/src/App.js#L13-L26) and basic layout.
-    - Retain a Nav component across the site whilst replacing the site content components.  
+    - Retain a Nav component across the site whilst replacing the site content components.
     - Simple Loading and Error message components, keeping users informed during delayed or failed request with simple reusable code, eg [TimeSeries.js](https://github.com/DBBrowne/project-two-sei/blob/main/src/displays/TimeSeries.js#L70-L94):
-      ```javascript
+      ```js
       function ReactComponent () {
         const [isError, setIsError] = React.useState(false)
         const isLoading = !isError && !asyncContent
@@ -122,8 +122,8 @@ Basic project plan, targeting highest value issues first, followed by highest ri
     - [Show the data](https://github.com/DBBrowne/project-two-sei/blob/38b7bba8b79937602ecd8efddd5200c3c7a2185a/src/lib/utils.js#L25-L66)
         > Initially used [Victory](https://formidable.com/open-source/victory/), which provided excellent responsive charting components, however we were unable to format the axes and labels to meet our requirements.
 
-        > We moved to [React-vis](uber.github.io/react-vis/) which supported the labelling and range control that we needed, however was not natively responsive.  This was solved with a [React Effect hook and window resize listener(https://github.com/DBBrowne/project-two-sei/blob/main/src/displays/TimeSeries.js#L23-L42)]:
-        ```javascript
+        > We moved to [React-vis](uber.github.io/react-vis/) which supported the labelling and range control that we needed, however was not natively responsive. This was solved with a [React Effect hook and window resize listener(https://github.com/DBBrowne/project-two-sei/blob/main/src/displays/TimeSeries.js#L23-L42)]:
+        ```js
         function TimeSeries({ inputData }){
           // ...
           const graphContainerRef = React.useRef(null)
@@ -161,7 +161,7 @@ Basic project plan, targeting highest value issues first, followed by highest ri
         ```
 1. Re-use time series data components to offer comparison from one base to a variety of quoted tokens.
     - Once we have a reliable charting component, we can simply reuse that to offer comparative data between multiple token pairs:
-      ```javascript
+      ```js
       function CoinDetail(){
 
         // ...
@@ -177,8 +177,8 @@ Basic project plan, targeting highest value issues first, followed by highest ri
       ```
 
 ## Issues and ToDos
- - **Unhappy Wrapper** - combine error and loading into single react component to accept error/loading state as parameters and wrap the happy path.
- - **Chart Y-Axis Scaling** - at extreme ranges, the Y scaling of teh charting component fails, and the line extends off the chart.  We saw this during development, and believed that we had addressed it by [setting the domain and margins](https://github.com/DBBrowne/project-two-sei/blob/main/src/displays/TimeSeries.js#L76-L77), however the issue has resurfaced.  Further investigation is required.
+ - **Unhappy Wrapper** - combine error and loading into a single react component to accept error/loading state as parameters and wrap the happy path.
+ - **Chart Y-Axis Scaling** - at extreme ranges, the Y scaling of the charting component fails, and the line extends off the chart. We saw this during development, and believed that we had addressed it by [setting the domain and margins](https://github.com/DBBrowne/project-two-sei/blob/main/src/displays/TimeSeries.js#L76-L77), however the issue has resurfaced. Further investigation is required.
     ```jsx
     <XYPlot
       yDomain={[chartData.minValue * 0.85, chartData.maxValue * 1.25]}

@@ -6,7 +6,9 @@ Deployed at [compcoin.dbb.tools](https://compcoin.dbb.tools) via [Netlify](https
 
 
 ## Contents
-- [Usage](#usage)
+- [CompCoin](#compcoin)
+- [Demos and Usage](#demos-and-usage)
+- [Technologies](#technologies)
 - [Getting Started](#getting-started)
 - [Project History](#project-history)
     - [Brief](#brief)
@@ -16,12 +18,17 @@ Deployed at [compcoin.dbb.tools](https://compcoin.dbb.tools) via [Netlify](https
 - [Built with](#built-with)
 - [Team Members](#team-members)
 
-## Usage
+## Demos and Usage
 |Single pair|Multi-pair comparison|
 |---|---|
 |Spot conversion rate and time series valuation for a coin pair.|View time-series comparisons with a number of significant cryptocurrencies.|
 |Visit `/convert`, enter the amount for conversion, and select the base and quote token.|Visit `/convert/<ticker>` or hover the **Coin Detail** dropdown from the nav bar, then select the base currency of choice.|
 |![CompCoin Single Pair view](https://user-images.githubusercontent.com/72463218/154111327-1f1ec2d3-facd-47d5-b691-5c1638fb7d6f.png)|![Compcoin Multi-pair view](https://user-images.githubusercontent.com/72463218/154111244-041d772d-7a09-4f9d-b732-3d346111d356.png) |
+
+## Technologies
+| - [Create React App](https://github.com/facebook/create-react-app)<br>- [Axios](https://npmjs.com/package/axios)<br>- [React-Vis](https://uber.github.io/react-vis/)|- [Bulma](https://bulma.io)<br>- [SASS](https://sass-lang.com/)<br>- [dayjs](https://www.npmjs.com/package/dayjs)|
+|---|---|
+
 
 ## Getting Started
 These instructions will run a copy of the project on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
@@ -188,14 +195,6 @@ Basic project plan, targeting highest value issues first, followed by highest ri
     ```
 
  ![Chart Component scaling failure](https://user-images.githubusercontent.com/72463218/154364867-8e98597e-57fe-4408-9a79-75206c6b6a79.png)
-## Built With
-- [Create React App](https://github.com/facebook/create-react-app)
-- [Axios](https://npmjs.com/package/axios)
-- [React-Vis](https://uber.github.io/react-vis/)
-- [Bulma css framework](https://bulma.io)
-- [SASS](https://sass-lang.com/)
-- [dayjs](https://www.npmjs.com/package/dayjs)
-
 ## Team Members
 - [tigeryant](https://github.com/tigeryant)
 - [Duncan Browne](https://github.com/dbbrowne)
